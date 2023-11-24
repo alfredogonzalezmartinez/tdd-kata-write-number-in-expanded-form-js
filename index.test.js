@@ -27,7 +27,7 @@ test("A multiple-digit number in expanded form is represented as a string with t
 });
 
 // Uncomment that, if it passes the earlier tests
-// test("A number with zero as a digit in expanded form is represented as a string with the sum of each non-zero digit's value", () => {
-// 	expect(expandedForm(10270)).toBe("10000 + 200 + 70");
-// 	expect(expandedForm(6049)).toBe("6000 + 40 + 9");
-// });
+test("A number with zero as a digit in expanded form is represented as a string with the sum of each non-zero digit's value", () => {
+	expect(expandedForm(10270)).toBe("10000 + 200 + 70");
+	expect(expandedForm(6049)).toBe("6000 + 40 + 9");
+});

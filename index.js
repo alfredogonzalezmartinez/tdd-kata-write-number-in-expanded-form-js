@@ -17,7 +17,7 @@ export function expandedForm(num) {
 	const head = (num) => Math.floor(num / BASE);
 	const tail = (num) => num % BASE;
 	const nextMultiplier = (multiplier) => multiplier * BASE;
-	const join = (value, string) => `${value}${string && ` + ${string}`}`;
+	const join = (value, string) => (value ? `${value}${string && ` + ${string}`}` : string);
 
 	return (function expandedForm$(num, multiplier = INITIAL_MULTIPLIER, prevExpanded = INITIAL_EXPANDED_FORM) {
 		return (
