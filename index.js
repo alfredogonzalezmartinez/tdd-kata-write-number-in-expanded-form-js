@@ -11,5 +11,5 @@
  * expandedForm(102); // returns '100 + 2'
  */
 export function expandedForm(num) {
-	// Write your code here
+	return `${num}`;
 }
