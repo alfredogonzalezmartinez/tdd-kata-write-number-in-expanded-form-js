@@ -11,9 +11,9 @@ test("A two-digit number in expanded form is represented as a string with the su
 });
 
 // Uncomment that, if it passes the above test
-// test("A three-digit number in expanded form is represented as a string with the sum of the value of the three digits", () => {
-// 	expect(expandedForm(367)).toBe("300 + 60 + 7");
-// });
+test("A three-digit number in expanded form is represented as a string with the sum of the value of the three digits", () => {
+	expect(expandedForm(367)).toBe("300 + 60 + 7");
+});
 
 /*
   It you are at that point, now you can delete/comment the two 

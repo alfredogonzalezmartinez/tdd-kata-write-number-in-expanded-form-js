@@ -12,8 +12,17 @@
  */
 export function expandedForm(num) {
 	const BASE = 10;
+	const INITIAL_MULTIPLIER = 1;
+	const INITIAL_EXPANDED_FORM = "";
 	const head = (num) => Math.floor(num / BASE);
 	const tail = (num) => num % BASE;
-	if (num >= BASE) return `${head(num) * BASE} + ${tail(num)}`;
-	return `${num}`;
+	const nextMultiplier = (multiplier) => multiplier * BASE;
+	const join = (value, string) => `${value}${string && ` + ${string}`}`;
+
+	return (function expandedForm$(num, multiplier = INITIAL_MULTIPLIER, prevExpanded = INITIAL_EXPANDED_FORM) {
+		return (
+			(num < BASE && join(num * multiplier, prevExpanded)) ||
+			expandedForm$(head(num), nextMultiplier(multiplier), join(tail(num) * multiplier, prevExpanded))
+		);
+	})(num);
 }
