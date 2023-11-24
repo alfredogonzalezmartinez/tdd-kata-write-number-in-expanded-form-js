@@ -6,9 +6,9 @@ test("A single-digit number in expanded form is represented as a string with tha
 });
 
 // Uncomment that, if it pass the first test
-// test("A two-digit number in expanded form is represented as a string with the sum of the value of the two digits", () => {
-// 	expect(expandedForm(21)).toBe("20 + 1");
-// });
+test("A two-digit number in expanded form is represented as a string with the sum of the value of the two digits", () => {
+	expect(expandedForm(21)).toBe("20 + 1");
+});
 
 // Uncomment that, if it passes the above test
 // test("A three-digit number in expanded form is represented as a string with the sum of the value of the three digits", () => {
