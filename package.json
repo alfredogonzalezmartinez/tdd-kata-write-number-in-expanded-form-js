@@ -1,0 +1,19 @@
+{
+	"name": "tdd-kata-write-number-in-expanded-form",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"check": "npx @biomejs/biome check --apply .",
+		"test": "vitest"
+	},
+	"engines": {
+		"node": ">=v14.18.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.3.3",
+		"vitest": "0.34.6"
+	}
+}
